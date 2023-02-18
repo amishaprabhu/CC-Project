@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block content %}
+            <div class="card-body">
+                <center> <h5 class="card-title center">Fill this form</h5></center>
+                <center><p class="card-text">Here you need to enter all your details, for to predict your placement.</p></center><br>
+                <form action="{{ url_for('result') }}" method="POST">
+                  <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                          <label for="stream" >Select your Stream</label>
+                          <select class="form-control" id="stream" name='stream' required>
+                            <option value="0">Electronics And Communication</option>
+                            <option value="1">Computer Science</option>
+                            <option value="2">Information Technology</option>
+                            <option value="3">Mechanical</option>
+                            <option value="4">Electrical</option>
+                            <option value="5">Civil</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                     <div class="form-group">
+                          <label for="gender">Select your gender</label>
+                          <select class="form-control" id="gender" name="gender" required>
+                            <option value="1" >Female</option>
+                            <option value="0">Male</option>
+                            <option value="1">not to reveal</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                     <div class="form-group">
+                          <label for="age">Enter your age:</label>
+                         <input type="text" class="form-control" id="age" name='age' required >
+                        </div>
+                    </div>
+                  </div><br>
+                   <div class="row">
+                    <div class="col">
+                     <div class="form-group">
+                          <label for="internship">No of internships you did:</label>
+                         <input type="text" class="form-control" id="internship" name="internship" required>
+                        </div>
+                    </div>
+                    <div class="col">
+                     <div class="form-group">
+                          <label for="cgpa">Enter your cgpa:</label>
+                         <input type="text" class="form-control" id="cgpa" name='cgpa' required>
+                        </div>
+                    </div>
+                    <div class="col">
+                     <div class="form-group">
+                          <label for="backlog">History of backlog?</label>
+                         <select class="form-control" id="backlog" name="backlog" required>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                            
+                          </select>
+                        </div>
+                    </div>
+                  </div>
+                   </div>
+                   <center><input type="Submit" value="Submit" class="btn btn-primary w-25"></center>
+                </form>
+              
+              
+            </div>
+
+{% endblock %}
+          
